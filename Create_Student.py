@@ -85,17 +85,17 @@ class StudentRecords:
 
 if __name__ == "__main__":
     records = StudentRecords()
-    print(records.add_student("101", "Lara Bels", "23-97866@g.batstate-u.edu.ph"))
-    print(records.add_student("102", "Gian Mallari", "24-37809@g.batstate-u.edu.ph", grades={"Math": 85, "English": 73}))
-    print(records.update_student("101", grades={"Science": 91}))
-    print(records.enroll_course("102", "Physics"))
-    print(records.enroll_course("102", "Math"))
+    print(records.add_student("23-97866", "Lara Bels", "23-97866@g.batstate-u.edu.ph"))
+    print(records.add_student("24-37809", "Gian Mallari", "24-37809@g.batstate-u.edu.ph", grades={"Math": 85, "English": 73}))
+    print(records.update_student("23-97866", grades={"Science": 91}))
+    print(records.enroll_course("24-37809", "Physics"))
+    print(records.enroll_course("24-37809", "Math"))
     print("\n=== Gian's Info ===")
-    print(records.search_student("102"))
+    print(records.search_student("24-37809"))
     student = next((s for s in records.students if s.id_name[0] == "102"), None)
     if student:
         print(f"\nGian's GPA: {student.calculate_gpa()}")
-    print(records.delete_student("101"))
+    print(records.delete_student("23-97866"))
     print("\n=== Search Results for 'Ric' ===")
     for s in records.search_by_name("Ric"):
         print(s)
