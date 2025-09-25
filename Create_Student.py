@@ -92,7 +92,7 @@ if __name__ == "__main__":
     print(records.enroll_course("24-37809", "Math"))
     print("\n=== Gian's Info ===")
     print(records.search_student("24-37809"))
-    student = next((s for s in records.students if s.id_name[0] == "102"), None)
+    student = next((s for s in records.students if s.id_name[0] == "24-37809"), None)
     if student:
         print(f"\nGian's GPA: {student.calculate_gpa()}")
     print(records.delete_student("23-97866"))
