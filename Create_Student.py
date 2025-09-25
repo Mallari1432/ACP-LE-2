@@ -85,7 +85,7 @@ class StudentRecords:
 
 if __name__ == "__main__":
     records = StudentRecords()
-    print(records.add_student("101", "Lara Lucero", "23-97866@g.batstate-u.edu.ph"))
+    print(records.add_student("101", "Lara Bels", "23-97866@g.batstate-u.edu.ph"))
     print(records.add_student("102", "Gian Mallari", "24-37809@g.batstate-u.edu.ph", grades={"Math": 85, "English": 73}))
     print(records.update_student("101", grades={"Science": 91}))
     print(records.enroll_course("102", "Physics"))
